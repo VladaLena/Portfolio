@@ -1,0 +1,137 @@
+.nav-menu-btn,
+.nav-close-btn {
+  display: none;
+}
+header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  transition: 0.6s;
+}
+
+header .nav-bar {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  height: 5em;
+  border-bottom: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  display: flex;
+  // justify-content: end;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 150px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.navigation .nav-items a {
+  color: #fff;
+  font-size: 1.3em;
+  transition: all 0.3s linear;
+}
+.navigation .nav-items a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+.navigation .nav-items a:not(:last-child) {
+  margin-right: 50px;
+}
+
+// Scroll Indicator Bar
+
+::-webkit-scrollbar {
+  background: #fff;
+  width: 1px;
+  border-radius: 2em;
+}
+// ::-webkit-scrollbar-thumb {
+//   background: #282f4e;
+//   width: 100%;
+//   border-radius: 2em;
+// }
+::-webkit-scrollbar-thumb:hover {
+  background: #454f6d;
+}
+
+.scroll-indicator-container {
+  width: 100%;
+  height: 5px;
+}
+.scroll-indicator-bar {
+  background: rgba(255, 255, 255, 0.7);
+  width: 10%;
+  height: 100%;
+  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.5),
+    0 5px 50px rgba(255, 255, 255, 0.5);
+}
+// ---------------------
+@media (min-width: 1100px) {
+  header .nav-bar {
+    padding: 0 50px;
+  }
+  section {
+    padding: 30px 50px;
+    padding: 0.9em;
+  }
+}
+@media (max-width: 850px) {
+  .nav-menu-btn {
+    display: block;
+    color: #fff;
+    font-size: 2.5em;
+    cursor: pointer;
+  }
+  .navigation {
+    z-index: 9999;
+    position: fixed;
+    background: rgba(0, 0, 0, 1);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  .navigation.active {
+    visibility: visible;
+    opacity: 1;
+    overflow: auto;
+  }
+  .navigation .nav-items {
+    position: relative;
+    display: grid;
+    place-content: center;
+    gap: 20px;
+    max-width: 400px;
+    transform: translateY(-200px);
+    transition: 0.3s ease;
+  }
+
+  .navigation.active .nav-items {
+    transform: translateY(0);
+  }
+
+  .navigation .nav-items a {
+    font-size: 40px;
+  }
+  .nav-close-btn {
+    display: block;
+    color: #fff;
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    cursor: pointer;
+    margin: 30px 40px;
+  }
+}

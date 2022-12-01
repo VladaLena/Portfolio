@@ -1,0 +1,68 @@
+// section {
+//     position: relative;
+//     font-size: 1em;
+//     padding: 30px 150px;
+//     transition: 0.5s ease;
+//     transition-property: padding;
+//   }
+
+.home {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  // background: rgb(75, 5, 110);
+  // background: url("../img/lady.jpg") no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  // filter: brightness(0.4);
+}
+.home__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// .home:before {
+//   z-index: 888;
+//   content: "";
+//   position: absolute;
+//   width: 100%;
+//   height: 50px;
+//   background: linear-gradient(transparent, #000116);
+//   bottom: 0;
+//   left: 0;
+// }
+.home h1 {
+  font-size: 12vh;
+  font-weight: 600;
+  line-height: 1em;
+  z-index: 1000;
+}
+.home__title-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+  z-index: 1000;
+  color: rgba(255, 255, 255, 0.7);
+}
+.home__subtitle {
+  font-size: 2.5em;
+}
+.block {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  // background: rgb(107, 15, 160);
+  background: rgba(0, 0, 0, 1);
+  // box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  // box-shadow: 10px 10px 50px rgb(107, 15, 160);
+  // box-shadow: 0 0 50px rgb(107, 15, 160) inset;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5) inset;
+}
