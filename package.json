@@ -69,6 +69,7 @@
 	},
 	"dependencies": {
 		"animejs": "^3.2.1",
+		"aos": "^2.3.4",
 		"gsap": "^3.11.3",
 		"simplebar": "latest"
 	}
